@@ -27,8 +27,6 @@ public class CommandParser extends ListenerAdapter {
         // Capture user input
         String inputT = e.getMessage().getContentRaw();
 
-        System.out.println(BOT_PREFIX.length() + "|" + BOT_PREFIX +"|");
-
         // Remove all user messages from tasklist channels and all user commands from any channels
         if (e.getChannel().getName().endsWith("tasklist") || e.getMessage().getContentRaw().startsWith(BOT_PREFIX)) {
             e.getMessage().delete().queue();
