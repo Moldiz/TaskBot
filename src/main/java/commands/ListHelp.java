@@ -5,7 +5,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.awt.*;
 
-import static functions.Properties.BOT_PREFIX;
+import static functions.Constants.BOT_PREFIX;
 import static functions.UtilitySends.sendCustomPM;
 
 public class ListHelp {

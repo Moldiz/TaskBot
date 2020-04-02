@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import static functions.Properties.BOT_PREFIX;
+import static functions.Constants.BOT_PREFIX;
 import static functions.UtilitySends.sendPM;
 
 public class TaskCreate {

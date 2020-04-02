@@ -10,7 +10,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import static functions.Properties.BOT_PREFIX;
+import static functions.Constants.BOT_PREFIX;
 import static functions.UtilitySends.sendCustomPM;
 import static functions.UtilitySends.sendPM;
 

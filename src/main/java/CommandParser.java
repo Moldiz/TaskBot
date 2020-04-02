@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static functions.Properties.BOT_PREFIX;
+import static functions.Constants.BOT_PREFIX;
 import static functions.UtilitySends.sendPM;
 
 
@@ -26,6 +26,8 @@ public class CommandParser extends ListenerAdapter {
 
         // Capture user input
         String inputT = e.getMessage().getContentRaw();
+
+        System.out.println(BOT_PREFIX.length() + "|" + BOT_PREFIX +"|");
 
         // Remove all user messages from tasklist channels and all user commands from any channels
         if (e.getChannel().getName().endsWith("tasklist") || e.getMessage().getContentRaw().startsWith(BOT_PREFIX)) {
