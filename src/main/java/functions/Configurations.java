@@ -1,6 +1,6 @@
 package functions;
 
-import java.util.Objects;
+import java.io.FileInputStream;
 import java.util.Properties;
 
 public final class Configurations {
@@ -12,7 +12,7 @@ public final class Configurations {
     private Configurations (){
         this.properties = new Properties();
         try{
-            properties.load(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream(Constants.PATH_CONFFILE)));
+            properties.load(new FileInputStream(Constants.PATH_CONFFILE));
         }catch(Exception ex){
             ex.printStackTrace();
         }

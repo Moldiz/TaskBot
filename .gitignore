@@ -1,5 +1,5 @@
-# Personal settings
-/src/main/resources/config.properties
+# Personal settings (comented for git upload without private parameters used for testing)
+#/src/main/resources/config.properties
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
