@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="Full Project">
+    <output-path>$PROJECT_DIR$/out/artifacts/Full_Project</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="TaskBot:jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.properties" />
+    </root>
+  </artifact>
+</component>
