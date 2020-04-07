@@ -1,5 +1,6 @@
 package functions;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -12,7 +13,7 @@ public final class Configurations {
     private Configurations (){
         this.properties = new Properties();
         try{
-            properties.load(new FileInputStream(Constants.PATH_CONFFILE));
+            properties.load(new FileInputStream(System.getProperty("user.dir") + File.separator + Constants.PATH_CONFFILE));
         }catch(Exception ex){
             ex.printStackTrace();
         }

@@ -8,4 +8,5 @@ public class Constants {
 
     // Constants (not user configurable)
     public static final String PATH_CONFFILE = "config.properties";
+    public static final String VERSION = "v1.2.1";
 }
