@@ -1,5 +1,7 @@
 # Personal settings (to make git ignore changes in config file so it won't push it use "git update-index --skip-worktree config.properties")
 config.properties1
+.idea
+*.iml
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm

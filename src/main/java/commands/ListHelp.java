@@ -1,6 +1,7 @@
 package commands;
 
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.awt.*;
@@ -23,6 +24,18 @@ public class ListHelp {
         eb.addField(":wrench: Utility", "`" + BOT_PREFIX + "help`", true);
 
         sendCustomPM(e.getAuthor(), eb.build());
+
+        /* Fixme: Z regóły bulidery są po to żeby nie trzeba było ciągle powtarzać nazwy zmiennej
+         * dlatego każda metoda buildera zwraca samą siebie
+         * to dotyczy wszytskich tych builderów w projekcie
+         */
+        MessageEmbed messageEmbed = new EmbedBuilder().setColor(new Color(0, 150, 130))
+                .setAuthor("Task.it Standard Command List - " + VERSION, null, "https://cdn.discordapp.com/app-icons/692401395613171814/6bf084825c16748ff058818115990064.png")
+                .setDescription("To get help just type needed command name without arguments.\n:black_small_square:")
+                .addField(":memo: Tasks Management", "`" + BOT_PREFIX + "create`\n`" + BOT_PREFIX + "update`\n`" + BOT_PREFIX + "remove`", true)
+                .addBlankField(true)
+                .addField(":wrench: Utility", "`" + BOT_PREFIX + "help`", true)
+                .build();
 
     }
 

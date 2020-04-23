@@ -17,6 +17,8 @@ import static net.dv8tion.jda.api.Permission.MESSAGE_MANAGE;
 
 public class TaskRemove {
 
+
+
     public static void commandRemove(GuildMessageReceivedEvent e, ArrayList<String> args) {
 
         String commandSyntax = "Syntax: `" + BOT_PREFIX + "remove [Task id], *[Reason]`";
@@ -28,6 +30,10 @@ public class TaskRemove {
 
         if (args.get(0).matches("\\s*")) {
             sendPM(e.getAuthor(), commandSyntax + "\n\n" + commandInfo, "info");
+                /*
+    FIXME: po co te wysztkie Objcets.requireNotNull ??? one nic nie robią i tak poleci NPE i tak
+    jak chcesz się pozbyć NPE to polecam Optional (java 8+)
+     */
         } else if (!Objects.requireNonNull(e.getMember()).hasPermission(e.getChannel(), MESSAGE_MANAGE)){
             sendPM(e.getAuthor(), "Error. You need message manage privilege to use this command.\n" + commandSyntax, "error");
         } else if ((args.size()>2)) {

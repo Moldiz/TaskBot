@@ -18,6 +18,9 @@ public class TaskUpdate {
 
     public static void commandUpdate(GuildMessageReceivedEvent e, ArrayList<String> args) {
 
+        /* Fixme: Może to powinny być stałę pola? Bo one się nie zmieniają
+         *  privite static final String commandSyntax = ...
+         */
         String commandSyntax = "Syntax: `" + BOT_PREFIX + "update [Task id], *[Quantity], *[Message]`";
         String commandInfo = "Update status and quantity of task, also sends notification to requester.\n\n" +
                 "Submitting update without `Quantity` when status is `To do` or `Partially Done` will change status to `In realisation`.\n" +
